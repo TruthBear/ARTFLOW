@@ -74,8 +74,12 @@ button{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    margin-right: 300px;
-    float: left;
+    width: 75%;
+    text-align: start;
+}
+
+.ex-info2{
+ display: flex;
 }
 
 .ex-btn{
@@ -94,7 +98,6 @@ button{
 
 @media screen and (min-width:760px)  and (max-width:1279px){
      
-
     .exhibition-info .exhibition-img{
         display: flex;
         flex-direction: row;
@@ -127,8 +130,7 @@ button{
     }
 
     .exhibition-info .exhibition-maininfo{
-        margin-right: 245px;
-        float: left;
+        /* margin-right: 245px; */
     }
 
     .exhibition-btn{
