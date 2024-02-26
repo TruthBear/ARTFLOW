@@ -1,0 +1,139 @@
+/* 전체 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* header */
+
+
+/* section 1 */
+
+.text-slide{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+}
+
+.text-slide .text-slides{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: #ccc;
+}
+
+
+/* section 2 */
+
+
+
+
+/* section 3 */
+
+.exhibition-area ul{
+    display: flex;
+    margin-left: 10px;
+}
+
+.exhibition-area ul li{
+    border-right: 1px solid rgb(179, 179, 179);
+    padding: 8px;
+}
+
+.exhibition-info{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 10px;
+}
+
+.exhibition-info .exhibition-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exhibition-info img{
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.exhibition-maininfo{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 300px;
+    float: left;
+}
+
+.ex-btn{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.exhibition-btn{
+    padding: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+@media screen and (min-width:760px)  and (max-width:1279px){
+     
+
+    .exhibition-info .exhibition-img{
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px ;
+        align-items: flex-start;
+    }
+
+    .exhibition-info img{
+        width: 60%;
+    }
+
+    .exhibition-maininfo{
+        margin-left: 10px;
+        margin-top: 45px;
+    }
+
+    .exhibition-btn{
+        padding: 18px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+}
+
+@media screen and (min-width:1280px) {
+   
+    .exhibition-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .exhibition-info .exhibition-maininfo{
+        margin-right: 245px;
+        float: left;
+    }
+
+    .exhibition-btn{
+        padding: 25px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
