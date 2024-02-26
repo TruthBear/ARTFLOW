@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  cursor: none;
+}
+
+main {
+  background: blue;
+}
+
+.cursor {
+  background: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  
+  position: fixed;
+  left: -1000px;
+  top: -1000px;
+  z-index: 100;
+  
+  mix-blend-mode: difference;
+  /* mix-blend-mode: multiply; */
+
+  pointer-events: none;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  transition: all .15s ease;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform,-webkit-transform;
+}
+
+.hidden {
+  display: none;
+}
