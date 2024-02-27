@@ -6,16 +6,19 @@ nav{display: flex; justify-content: space-between;}
 nav div{margin: 20px;}
 nav li{display:inline-block; margin:20px;}
 body{background-color: black; color: white;}
-.search-box{display: flex; flex-wrap: wrap; justify-content:right;padding: 10px; margin: 10px;
-        border-top:1px solid white; border-bottom:1px solid white; }
+.search-box{display: flex;justify-content:right;padding: 10px; margin: 10px;
+        border-top:1px solid white; border-bottom:1px solid white;}
+.first{display: flex;}
+.first-tag{display:flex;}
 .search-box p{margin: 5px;}
+.search-box input{height: 30px;}
 input[type='date']::before {
     content: attr(data-placeholder);
     width: 100%;
     text-align: center;
     position: relative;
   }
-.info-container{display: grid; grid-template-columns: repeat(4, 1fr);}
+.info-container{display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 100px;}
 .info-box{ margin: 20px;}
 .image {position: relative;}
 .image div{position:absolute; bottom:10px;background-color:white;color: black; border-radius: 15px; padding: 5px 10px; margin-left: 5px;}
@@ -26,11 +29,13 @@ input[type='date']::before {
 /* 테블릿 */
 @media screen and (max-width:1279px){
   .info-container{display: grid; grid-template-columns: repeat(2, 1fr);}
-  .search-box input:last-child{width:50%;; height:31.6px;}
+  .search-box{flex-direction: column;align-items: end;}
 }
 
 /* 모바일 */
 @media screen and (max-width:759px){
-  .info-container{display: grid; grid-template-columns: repeat(1, 1fr);}
-  .date{}
+  .info-container{display: grid; grid-template-columns: repeat(1, 1fr); padding: 0 24px;}
+  .first{flex-direction: column;}
+  .first-tag{justify-content: end;}
+  
 }
