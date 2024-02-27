@@ -10,7 +10,7 @@ body{background-color: black; color: white;}
         border-top:1px solid white; border-bottom:1px solid white;}
 .first{display: flex;}
 .first-tag{display:flex;}
-.search-box p{margin: 5px;}
+.search-box select{height: 30px;}
 .search-box input{height: 30px;}
 input[type='date']::before {
     content: attr(data-placeholder);
