@@ -9,8 +9,54 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background: #fff;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
+header {
+  position: relative;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 24px;
+}
+
+.logo span{
+  font-weight: bold;
+}
+
+.gnb-pc {
+  display: flex;
+  
+  justify-content: space-around;
+}
+
+.gnb-pc li {
+  padding: 0 8px;
+}
+
+.gnb-pc li a {
+  padding: 1px 7px;
+  font-weight: 500;
+}
+
+.gnb-pc li a:hover {
+  background: #000;
+  color: #fff;
+
+  border-radius: 50px;
 }
 
 .cursor {
@@ -35,6 +81,11 @@ body {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform,-webkit-transform;
+}
+
+.hover {
+  background: #2b79a6;
+  transform: translate(-50%,-50%) scale(1.9);
 }
 
 .hidden {
