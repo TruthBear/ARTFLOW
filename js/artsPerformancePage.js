@@ -3,7 +3,8 @@ import artsPerformanceApi from './api.js';
 const artsPerformancePage = () => {
 
   const wrap = document.createElement('div');
-  
+  wrap.classList.add('page')
+
   const searchSection=document.createElement("section");
   searchSection.classList.add("search");
 

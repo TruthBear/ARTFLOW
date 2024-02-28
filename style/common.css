@@ -15,14 +15,16 @@ a {
 }
 
 body {
-  background: #000;
-
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
-
 }
 
+.page {
+  background: #fff;
+  height: 100vh;
+  padding-top: 100px;
 
+}
 
 /* 헤더 */
 header {
@@ -41,14 +43,16 @@ header .header-wrap {
   align-items: center;
   padding: 12px 24px;
 
-  border-bottom: 1px solid #000;
+  transition: background 0.3s;
 
+  transition: opacity 0.3s;
+  
 }
 
 .logo span a{
   font-weight: 900;
   color: #000;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   font-size: 24px;
 }
 
@@ -82,12 +86,14 @@ header .header-wrap {
 }
 
 .gnb-mo {
+  opacity: 0;
   width: 100%;
   background: #fff;
   position: fixed;
   left: 0;
   top: 65px;
 
+  transition: opacity 0.3s;
   z-index: 10;
 }
 
@@ -108,8 +114,6 @@ header .header-wrap {
 
   font-size: 32px;
 }
-
-
 
 .cursor {
   background: #fff;
@@ -138,6 +142,18 @@ header .header-wrap {
 .hover {
   background: #2b79a6;
   transform: translate(-50%,-50%) scale(1.9);
+}
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.white {
+  background: #fff;
+}
+
+.show {
+  opacity: 1; 
 }
 
 .hidden {

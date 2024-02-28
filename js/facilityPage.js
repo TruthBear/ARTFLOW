@@ -1,6 +1,7 @@
 const white = () => {
 
   const wrap = document.createElement('div');
+  wrap.classList.add('page')
 
   // 섹션 엘리먼트 생성
   const exhibitionSection = document.createElement('section');
