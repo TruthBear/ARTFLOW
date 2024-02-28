@@ -1,7 +1,12 @@
-const test = () => {
-  fetch('../php/handleAPI.php')
-  .then(res => res.json())
-  .then(data => console.log(data.db))  
-}
+const artsPerformanceApi = async () => {
+  try {
+    return fetch('../php/handleAPI.php')
+    .then(res => res.json())
+    .then(result => result.db);
+  } catch (err) {
+    console.error("에러");
+    throw err;
+  }
+};
 
-export default test;
+export default artsPerformanceApi;

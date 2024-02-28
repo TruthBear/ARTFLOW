@@ -1,9 +1,11 @@
-// import test from './api.js';
+import test from './api.js';
 
 
 
 
 const black = () => {
+  
+
   const searchSection=document.createElement("section");
   searchSection.classList.add("search");
 
@@ -71,42 +73,82 @@ const black = () => {
   const infoContainer=document.createElement("div");
   infoContainer.classList.add("info-container");
 
-  for(let i=0;i<8;i++){
-    const infoBox=document.createElement("div");
-    infoBox.classList.add("info-box");
+  artsPerformanceApi()
+  .then(data => {
+    data.map(item => {
+        const infoBox=document.createElement("div");
+      infoBox.classList.add("info-box");
 
-    const imageDiv=document.createElement("div");
-    imageDiv.classList.add("image");
+      const imageDiv=document.createElement("div");
+      imageDiv.classList.add("image");
 
-    const image=document.createElement("img");
-    image.setAttribute("src","https://cdn.pixabay.com/photo/2023/12/08/02/32/indoors-8436679_1280.jpg")
+      const image=document.createElement("img");
+      image.setAttribute("src",`${item.poster}`)
 
-    const genreTag=document.createElement("div");
-    genreTag.textContent="장르";
+      const genreTag=document.createElement("div");
+      genreTag.textContent=`${item.genrenm}`;
 
-    imageDiv.appendChild(image);
-    imageDiv.appendChild(genreTag);
+      imageDiv.appendChild(image);
+      imageDiv.appendChild(genreTag);
 
-    const infoDiv=document.createElement("div");
+      const infoDiv=document.createElement("div");
 
-    const titleP=document.createElement("p");
-    titleP.textContent="공연명";
+      const titleP=document.createElement("p");
+      titleP.textContent=`${item.prfnm}`;
 
-    const locationP=document.createElement("p");
-    locationP.textContent="장소";
+      const locationP=document.createElement("p");
+      locationP.textContent=`${item.fcltynm}`;
 
-    const dateP=document.createElement("p");
-    dateP.textContent="기간";
+      const dateP=document.createElement("p");
+      dateP.textContent=`${item.prfpdfrom} ~ ${item.prfpdto}`;
 
-    infoDiv.appendChild(titleP);
-    infoDiv.appendChild(locationP);
-    infoDiv.appendChild(dateP);
+      infoDiv.appendChild(titleP);
+      infoDiv.appendChild(locationP);
+      infoDiv.appendChild(dateP);
 
-    infoBox.appendChild(imageDiv);
-    infoBox.appendChild(infoDiv);
+      infoBox.appendChild(imageDiv);
+      infoBox.appendChild(infoDiv);
 
-    infoContainer.appendChild(infoBox);
-  }
+      infoContainer.appendChild(infoBox);
+    })
+  });
+  
+  // for(let i=0;i<8;i++){
+  //   const infoBox=document.createElement("div");
+  //   infoBox.classList.add("info-box");
+
+  //   const imageDiv=document.createElement("div");
+  //   imageDiv.classList.add("image");
+
+  //   const image=document.createElement("img");
+  //   image.setAttribute("src","https://cdn.pixabay.com/photo/2023/12/08/02/32/indoors-8436679_1280.jpg")
+
+  //   const genreTag=document.createElement("div");
+  //   genreTag.textContent="장르";
+
+  //   imageDiv.appendChild(image);
+  //   imageDiv.appendChild(genreTag);
+
+  //   const infoDiv=document.createElement("div");
+
+  //   const titleP=document.createElement("p");
+  //   titleP.textContent="공연명";
+
+  //   const locationP=document.createElement("p");
+  //   locationP.textContent="장소";
+
+  //   const dateP=document.createElement("p");
+  //   dateP.textContent="기간";
+
+  //   infoDiv.appendChild(titleP);
+  //   infoDiv.appendChild(locationP);
+  //   infoDiv.appendChild(dateP);
+
+  //   infoBox.appendChild(imageDiv);
+  //   infoBox.appendChild(infoDiv);
+
+  //   infoContainer.appendChild(infoBox);
+  // }
 
   //more 버튼
 
