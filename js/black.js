@@ -1,11 +1,9 @@
-import test from './api.js';
+import artsPerformanceApi from './api.js';
 
+const artPage = () => {
 
-
-
-const black = () => {
+  const wrap = document.createElement('div');
   
-
   const searchSection=document.createElement("section");
   searchSection.classList.add("search");
 
@@ -159,10 +157,12 @@ const black = () => {
   infoSection.appendChild(infoContainer);
   infoSection.appendChild(more);
 
-  document.body.appendChild(searchSection);
-  document.body.appendChild(infoSection);
+  wrap.appendChild(searchSection);
+  wrap.appendChild(infoSection);
+
+  return wrap;
+  // document.body.appendChild(searchSection);
+  // document.body.appendChild(infoSection);
 }
 
-
-const hi = document.getElementById('hi')
-hi.addEventListener('click', black)
+export default artPage;
