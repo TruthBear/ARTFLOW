@@ -9,7 +9,7 @@ const homePage = () => {
   const slideTrack = document.createElement('div');
   slideTrack.classList.add('slide-track');
 
-  const slideArr = ["A R T F L O W", "A R T F L O W"];
+  const slideArr = ["Live art performance unfolds", "Live art performance unfolds"];
   slideArr.forEach((item)=> {
     const slide = document.createElement('div');
     slide.textContent = item;

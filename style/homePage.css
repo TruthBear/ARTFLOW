@@ -17,12 +17,12 @@
 .slide-track {
   display: flex;
   width: calc(100% * 2); /* 슬라이드 개수에 따라 조정 */
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
 }
 
 .slide {
   width: 50%; /* 슬라이드 개수에 따라 조정 */
-  font-size: 100px;
+  font-size: 80px;
   white-space: nowrap;
   font-weight: 900;
 }
