@@ -9,8 +9,12 @@ li {
   list-style: none;
 }
 
+body {
+  background: #fff;
+}
+
 .cursor {
-  background: #000;
+  background: #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -21,6 +25,7 @@ li {
   z-index: 100;
   
   mix-blend-mode: difference;
+  
   /* mix-blend-mode: multiply; */
 
   /* pointer-events: none;

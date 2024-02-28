@@ -2,7 +2,7 @@
   // require '../config.php';
   
   $apiKey = getenv("API_KEY");
-  $querys = "&stdate=20240201&eddate=20240203&cpage=1&rows=10&prfstate=02&signgucode=11&signgucodesub=1111&kidstate=Y&newsql=Y";
+  $querys = "&stdate=20240201&eddate=20240203&cpage=1&rows=8&prfstate=02&signgucode=11&signgucodesub=1111&kidstate=Y&newsql=Y";
   $url = "http://www.kopis.or.kr/openApi/restful/pblprfr?service=".$apiKey.$querys;
   
   // cURL 세션 초기화
