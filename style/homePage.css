@@ -43,8 +43,7 @@
 
 .circle {
   background: #000;
-  margin: 0 24px;
-
+  margin: 0 1.2rem;
   overflow: hidden;
   width: calc(100vw / 5);
   height: calc((100vw / 5));

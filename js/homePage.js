@@ -1,8 +1,12 @@
 
 const homePage = () => {
   const wrap = document.createElement('div');
-  wrap.classList.add('bg-video')
-
+  wrap.style.background = '#fff';
+  wrap.style.position = 'fixed';
+  wrap.style.width = '100%';
+  wrap.style.height = '100%';
+  wrap.style.left = '0';
+  wrap.style.right = '0';
 
   // 가로 무한 슬라이드
   const slider = document.createElement('div');
