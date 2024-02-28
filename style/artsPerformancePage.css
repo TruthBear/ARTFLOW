@@ -1,7 +1,7 @@
 /* pc */
 nav{display: flex; justify-content: space-between;}
 nav div{margin: 20px;}
-nav li{display:inline-block; margin:20px;}
+/* nav li{display:inline-block; margin:20px;} */
 .search-box{display: flex;justify-content:right;padding: 10px; margin: 10px;
         border-top:1px solid white; border-bottom:1px solid white;}
 .first{display: flex;}

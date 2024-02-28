@@ -15,16 +15,30 @@ document.addEventListener("mouseenter", ()=>{
   cursor.classList.remove('hidden')
 })
 
-const hover = document.getElementsByTagName('a');
+// a태그 호버 
+const hoverTagA = document.getElementsByTagName('a');
 
-for(let i=0;i<hover.length;i++){
-  hover[i].addEventListener('mouseover', ()=>{
+for(let i=0;i<hoverTagA.length;i++){
+  hoverTagA[i].addEventListener('mouseover', ()=>{
     cursor.classList.add('hover');
   })
 }
+for(let i=0;i<hoverTagA.length;i++){
+  hoverTagA[i].addEventListener('mouseout', ()=>{
+    cursor.classList.remove('hover');
+  })
+}
 
-for(let i=0;i<hover.length;i++){
-  hover[i].addEventListener('mouseout', ()=>{
+// button태그 호버
+const hoverTagButton = document.getElementsByTagName('button');
+
+for(let i=0;i<hoverTagButton.length;i++){
+  hoverTagButton[i].addEventListener('mouseover', ()=>{
+    cursor.classList.add('hover');
+  })
+}
+for(let i=0;i<hoverTagButton.length;i++){
+  hoverTagButton[i].addEventListener('mouseout', ()=>{
     cursor.classList.remove('hover');
   })
 }
