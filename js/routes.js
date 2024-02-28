@@ -1,16 +1,18 @@
-import artPage from './black.js';
-import white from './white.js';
+import homePage from './homePage.js'
+import artsPerformancePage from './artsPerformancePage.js';
+import facilityPage from './facilityPage.js';
 
 const root = document.getElementById('root');
 const pages = {
-  home: white,
-  test: artPage,
+  "": homePage,
+  facility: facilityPage,
+  artsPerformance: artsPerformancePage,
 }
 
 const routes = () => {
   const hashTag = window.location.hash; //#home
   const pageId = hashTag.replace("#", ""); //home
-
+  
   root.replaceChildren();
 
   const pageFunc = pages[pageId];

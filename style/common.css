@@ -26,9 +26,7 @@ body {
   
   mix-blend-mode: difference;
   
-  /* mix-blend-mode: multiply; */
-
-  /* pointer-events: none;
+  pointer-events: none;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   -webkit-transform-origin: center;
@@ -36,7 +34,7 @@ body {
   transition: all .15s ease;
   transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform,-webkit-transform; */
+  transition-property: transform,-webkit-transform;
 }
 
 .hidden {

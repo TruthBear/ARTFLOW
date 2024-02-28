@@ -1,6 +1,6 @@
 import artsPerformanceApi from './api.js';
 
-const artPage = () => {
+const artsPerformancePage = () => {
 
   const wrap = document.createElement('div');
   
@@ -165,4 +165,4 @@ const artPage = () => {
   // document.body.appendChild(infoSection);
 }
 
-export default artPage;
+export default artsPerformancePage;
