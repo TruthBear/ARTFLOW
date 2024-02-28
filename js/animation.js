@@ -1,3 +1,5 @@
+// 모바일 토글 메뉴
+
 const menuBtn = document.getElementsByClassName('menu-btn')[0];
 
 menuBtn.addEventListener('click', ()=>{
@@ -7,6 +9,9 @@ menuBtn.addEventListener('click', ()=>{
   headerWrap.classList.toggle("border-bottom");
   headerWrap.classList.toggle('white');
 })
+
+
+// 메뉴 - 스크롤 감지
 
 let lastScrollY = window.scrollY;
 
@@ -28,7 +33,8 @@ window.addEventListener('scroll', () => {
     }
   }
 
-  
-
   lastScrollY = currentScrollY;
 });
+
+
+
