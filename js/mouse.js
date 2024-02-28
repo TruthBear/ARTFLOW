@@ -17,7 +17,7 @@ document.addEventListener("mouseenter", ()=>{
 
 // a태그 호버 
 const hoverTagA = document.getElementsByTagName('a');
-
+console.log(hoverTagA)
 for(let i=0;i<hoverTagA.length;i++){
   hoverTagA[i].addEventListener('mouseover', ()=>{
     cursor.classList.add('hover');
