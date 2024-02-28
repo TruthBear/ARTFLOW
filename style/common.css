@@ -5,8 +5,8 @@
   cursor: none;
 }
 
-main {
-  background: blue;
+li {
+  list-style: none;
 }
 
 .cursor {
