@@ -1,4 +1,4 @@
-const white = () => {
+const facilityPage = () => {
 
   const wrap = document.createElement('div');
   wrap.classList.add('page')
@@ -101,10 +101,9 @@ const white = () => {
   // 버튼 영역을 섹션에 추가
   exhibitionSection.appendChild(exhibitionButtonDiv);
 
-  // 섹션을 문서 body에 추가
   wrap.appendChild(exhibitionSection);
 
   return wrap;
   }
 
-export default white;
+export default facilityPage;

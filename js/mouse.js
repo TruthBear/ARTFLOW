@@ -17,7 +17,6 @@ document.addEventListener("mouseenter", ()=>{
 
 // a태그 호버 
 const hoverTagA = document.getElementsByTagName('a');
-console.log(hoverTagA)
 for(let i=0;i<hoverTagA.length;i++){
   hoverTagA[i].addEventListener('mouseover', ()=>{
     cursor.classList.add('hover');
@@ -41,4 +40,7 @@ for(let i=0;i<hoverTagButton.length;i++){
   hoverTagButton[i].addEventListener('mouseout', ()=>{
     cursor.classList.remove('hover');
   })
-}
+};
+
+
+export default cursor;

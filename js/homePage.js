@@ -1,12 +1,8 @@
+import cursor from './mouse.js'
 
 const homePage = () => {
   const wrap = document.createElement('div');
-  wrap.style.background = '#fff';
-  wrap.style.position = 'fixed';
-  wrap.style.width = '100%';
-  wrap.style.height = '100%';
-  wrap.style.left = '0';
-  wrap.style.right = '0';
+  wrap.classList.add('home-wrap');
 
   // 가로 무한 슬라이드
   const slider = document.createElement('div');
@@ -35,7 +31,23 @@ const homePage = () => {
   const circleBoxWrap = document.createElement('div');
   circleBoxWrap.classList.add('circle-box-wrap');
 
-  const circleTextArr = ["공연", "시설", "About"];
+  const circleTextArr = [
+    {
+      route: "#about",
+      text: "About",
+    },
+    {
+      route: "#artsPerformance",
+      text: "공연",
+    },
+    {
+      route: "#facility",
+      text: "시설",
+    },
+  ];
+
+  let tumpArr = [];
+  let i = 0;
 
   circleTextArr.forEach(item => {
     const circle = document.createElement('div');
@@ -45,17 +57,66 @@ const homePage = () => {
     circleWrap.classList.add('circle-wrap');
 
     const circleText = document.createElement('a');
+    circleText.setAttribute("href", item.route);
     circleText.classList.add('circle-text');
-    circleText.textContent = item;
+    circleText.textContent = item.text;
+
+    tumpArr[i] = circleText;
+    i++;
+
+    circleText.addEventListener('mouseover', ()=>{
+      cursor.classList.add('hover');
+      circle.style.background = "none"
+    })
+
+    circleText.addEventListener('mouseout', ()=>{
+      cursor.classList.remove('hover');
+      circle.style.background = "#000"
+    })
 
     circleWrap.appendChild(circleText);
     circle.appendChild(circleWrap);
     circleBoxWrap.appendChild(circle);
   })
 
+  
+
   circleBox.appendChild(circleBoxWrap);
   wrap.appendChild(circleBox);
 
+  for(let i=0; i<tumpArr.length; i++){
+    const circle = document.createElement('div');
+    circle.classList.add('bg')
+    circle.classList.add(`circle${i}`);
+
+    const videoWrap = document.createElement('div');
+
+    const video = document.createElement('video');
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("loop", "");
+    
+    const source = document.createElement('source');
+    source.setAttribute("src", `../asset/video/bg-${i}.mov`);
+    source.setAttribute("type", "video/mov");
+
+    video.appendChild(source);
+    videoWrap.appendChild(video);
+    circle.appendChild(videoWrap);
+    wrap.appendChild(circle);
+
+    console.log(tumpArr[i]);
+
+    tumpArr[i].addEventListener('mouseover', ()=>{
+      circle.classList.add('bg-show')
+    })
+
+    tumpArr[i].addEventListener('mouseout', ()=>{
+      circle.classList.remove('bg-show')
+    })
+
+  }
 
   return wrap;
 } 
